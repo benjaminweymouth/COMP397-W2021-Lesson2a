@@ -600,9 +600,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a49fc56e662db43bf2636e5cd01c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementForce: 0
-  jumpForce: 0
-  rigidbody: {fileID: 0}
+  controller: {fileID: 0}
+  maxSpeed: 10
+  gravity: -30
+  jumpHeight: 3
+  groundCheck: {fileID: 704375275}
+  groundRadius: 0.5
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+  velocity: {x: 0, y: 0, z: 0}
   isGrounded: 0
 --- !u!1 &1458543355
 GameObject:
@@ -643,7 +650,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458543355}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
